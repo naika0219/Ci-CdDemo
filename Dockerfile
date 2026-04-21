@@ -15,7 +15,7 @@
 #ENTRYPOINT ["java", "-jar", "app.jar"]
 
 #生产的标准做法是多阶段构建
-FROM maven:3.8.5-openjdk-17 AS build
+FROM maven:3.8.4-openjdk-17 AS build
 WORKDIR /app
 # 1. 复制 pom.xml 并下载依赖 (利用 Docker 缓存机制减少重复下载)
 COPY pom.xml .
